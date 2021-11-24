@@ -22,11 +22,11 @@
             <div class="icon"></div>
         </div>
         <nav class="navbar">
-            <a href="#section-one" class="navbar-link pointer-enter">Home</a>
-            <a href="#section-two" class="navbar-link pointer-enter">About Me</a>
-            <a href="#section-three" class="navbar-link pointer-enter">Projects</a>
-            <a href="#section-four" class="navbar-link pointer-enter">Services</a>
-            <a href="#section-five" class="navbar-link pointer-enter">Contact</a>
+            <a href="#section-one" class="navbar-link">Home</a>
+            <a href="#section-two" class="navbar-link">About Me</a>
+            <a href="#section-three" class="navbar-link">Projects</a>
+            <a href="#section-four" class="navbar-link">Experience</a>
+            <a href="#section-five" class="navbar-link">Contact</a>
         </nav>
         
         <!-- Section One -->
@@ -35,7 +35,7 @@
             <div class="main-image center">
                 <img src="assets/daughter.jpg" />
             </div>
-            <a href="#" class="main-btn">
+            <a href="#section-three" class="main-btn">
                 <div class="main-btn-content center">
                     <p>Projects</p>
                 </div>
@@ -50,7 +50,7 @@
                     Hello, I'm Damian, a freelacnce Full Stack Engineer based in Milton Keynes. I have a lot of passions but only one will remain my favorite - CODING!
                 </p>
             </div>
-            <a href="#" class="main-btn">
+            <a href="#section-five" class="main-btn">
                 <div class="main-btn-content center">
                     <p>Let's Talk</p>
                 </div>
@@ -58,77 +58,112 @@
         </section>
 
         <!-- Section Three -->
-        <section class="section-three" id="section-3">
+        <section class="section-three" id="section-three">
             <h1 class="section-heading">My Work</h1>
             <div class="projects center">
-                <div class="project pointer-enter">
+                <div class="project">
                     <img src="assets/projects/company-webpage.jpg"/>
                 </div>
-                <div class="project pointer-enter">
+                <div class="project">
                     <img src="assets/projects/fotomatic-webpage.jpg"/>
                 </div>
-                <div class="project pointer-enter">
+                <div class="project">
                     <img src="assets/projects/sport-club-webpage.jpg"/>
                 </div>
-                <div class="project pointer-enter">
+                <div class="project">
                     <img src="assets/projects/tea-cozy-website.jpg"/>
                 </div>
-                <div class="project pointer-enter">
+                <div class="project">
                     <img src="assets/projects/tsunami-cofee-website.jpg"/>
                 </div>
-                <div class="project pointer-enter">
+                <div class="project">
                     <img src="assets/projects/web-style-guide.jpg"/>
                 </div>
             </div>
         </section>
 
         <!-- Section Four -->
-        <section class="section-four" id="section-4">
+        <section class="section-four" id="section-four">
             <h1 class="section-heading">What I Can</h1>
-            <div class="services-wrapper center">
-                <div class="service">
-                    <a href="#" class="service-btn pointer-enter"><span>UI/UX</span></a>
-                    <p class="service-text">
-                    Landing Pages, User Flow, Wireframing Prototyping, Mobile App,
-                    Design, Web App
+            <div class="exp-wrapper center">
+                <div class="exp">
+                    <a href="#" class="exp-btn"><span>Development</span></a>
+                    <p class="exp-text">
+                        Frontend, Backend, API's, Databases
                     </p>
                 </div>
-                <div class="service">
-                    <a href="#" class="service-btn pointer-enter"
-                    ><span>Icon/Illustration</span></a
+                <div class="exp">
+                    <a href="#" class="exp-btn"
+                    ><span>Languages</span></a
                     >
-                    <p class="service-text">
-                    Character Design, Icon Set, Illustration Guide, Illustration Set
+                    <p class="exp-text">
+                        JavaScript, HTML, CSS, PHP, SQL
                     </p>
                 </div>
-                <div class="service">
-                    <a href="#" class="service-btn pointer-enter"
-                    ><span>Branding</span></a
+                <div class="exp">
+                    <a href="#" class="exp-btn"
+                    ><span>Frameworks</span></a
                     >
-                    <p class="service-text">
-                    Visual Identity, Stationary Kit, Marketing Materials
+                    <p class="exp-text">
+                        Angular, Node, Symphony
                     </p>
                 </div>
-                <div class="service">
-                    <a href="#" class="service-btn pointer-enter"
-                    ><span>Development</span></a
+                <div class="exp">
+                    <a href="#" class="exp-btn"
+                    ><span>UI/UX</span></a
                     >
-                    <p class="service-text">
-                    HTML/CSS, JavaScript, Wordpress, Responsive Website
-                    </p>
+                    <p class="exp-text">Landing Pages, Wireframing, Prototyping</p>
                 </div>
-                <div class="service">
-                    <a href="#" class="service-btn pointer-enter"
-                    ><span>Motion</span></a
-                    >
-                    <p class="service-text">2D Animation, Ui Motion</p>
-                </div>
-                <div class="service">
-                    <a href="#" class="service-btn pointer-enter"
-                    ><span>Photography</span></a
-                    >
-                    <p class="service-text">Travel Photography, Product Photography</p>
-                </div>
+            </div>
+        </section>
+
+        <!-- Section Five -->
+        <section class="section-five center" id="section-five">
+            <h1 class="section-heading">Contact Me</h1>
+            <div class="form-wrapper">
+                <h2 class="form-heading">Let's Talk</h2>
+                <form class="contact-form center" action="POST">
+                    <input
+                    type="text"
+                    class="contact-form-input"
+                    placeholder="Name"
+                    id="name"
+                    autocomplete="off"
+                    name="name"
+                    />
+                    <p class="message">Error Message</p>
+                    <input
+                    type="text"
+                    class="contact-form-input"
+                    placeholder="Email"
+                    id="email"
+                    autocomplete="off"
+                    name="email"
+                    />
+                    <p class="message">Error Message</p>
+                    <input
+                    type="text"
+                    class="contact-form-input"
+                    placeholder="Subject"
+                    id="subject"
+                    autocomplete="off"
+                    name="subject"
+                    />
+                    <p class="message">Error Message</p>
+                    <textarea
+                    class="contact-form-input contact-form-textarea"
+                    placeholder="Message"
+                    id="message"
+                    autocomplete="off"
+                    name="message"
+                    ></textarea>
+                    <p class="message">Error Message</p>
+                    <input
+                    type="submit"
+                    class="form-submit-btn"
+                    value="Send Request"
+                    />
+                </form>
             </div>
         </section>
     </div>

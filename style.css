@@ -55,7 +55,6 @@ html {
     justify-content: flex-end;
     padding-right: 3rem;
     z-index: 100;
-    transition: opacity 0.5s, visibility 0.5s, transform 0.5s;
 }
   
 .navbar-link {
@@ -66,41 +65,6 @@ html {
     margin: 0 2.5rem;
     text-shadow: 0 0.3rem 0.5rem #000;
 }
-
-.hide-navbar {
-    opacity: 0;
-    visibility: hidden;
-    transform: translateX(10rem);
-}
-
-/* .menu-icon {
-    position: fixed;
-    top: 3.5rem;
-    right: 0;
-    width: 12rem;
-    height: 7rem;
-    flex-direction: column;
-    opacity: 0;
-    visibility: hidden;
-    z-index: 100;
-    cursor: pointer;
-    transform: translate(-50%, -50%);
-    transition: opacity 0.2s;
-}
-  
-.icon {
-    width: 4rem;
-    height: 0.1rem;
-    background-color: #fff;
-    margin: 0.5rem 0;
-    box-shadow: 0 0.3rem 0.5rem #000;
-}
-  
-.show-menu-icon {
-    opacity: 1;
-    visibility: visible;
-} */
-
 
 /* Section One */
 .section-one {
@@ -119,17 +83,19 @@ html {
 }
 
 .main-image {
-    width: 45rem;
-    height: 45rem;
+    width: 40rem;
+    height: 40rem;
     position: absolute;
     overflow: hidden;
     border-radius: 25%;
-    transition: width 0.2s, height 0.2s;
+    opacity: 0.4;
+    transition: width 0.3s, height 0.3s, opacity 0.3s;
 }
   
 .main-image:hover {
     width: 65rem;
     height: 65rem;
+    opacity: 1;
 }
 
 .main-image img {
@@ -141,10 +107,10 @@ html {
 
 .main-btn {
     position: absolute;
-    bottom: 3rem;
+    bottom: -1rem;
     width: 10rem;
     height: 10rem;
-    background-color: #9b0e0e;
+    background-color: #5f1cfa;
     border-radius: 50%;
     border: 0.2rem dotted #fff;
     padding: 0.1rem;
@@ -161,7 +127,7 @@ html {
   
 .main-btn:hover .main-btn-content {
     transform: rotate(360deg);
-    border: 0.2rem dotted #9b0e0e;
+    border: 0.2rem dotted #5f1cfa;
     transition: transform 0.9s, border 0.2s;
 }
 
@@ -185,7 +151,7 @@ html {
   
 .about-me-text {
     font-family: "M+PLUS+1", sans-serif;
-    font-size: 12rem;
+    font-size: 11rem;
     font-weight: bold;
     color: #aaa;
     letter-spacing: 0.5rem;
@@ -208,7 +174,7 @@ html {
 .section-three {
     width: 100%;
     height: 100%;
-    padding: 10rem 0;
+    /* padding: 10rem 0; */
     margin-top: 10rem;
     position: relative;
 }
@@ -231,7 +197,7 @@ html {
     border-radius: 0.5rem;
     cursor: pointer;
     perspective: 20rem;
-    transition: opacity 0.5s;
+    transition: opacity 0.5s, transform 0.5s;
 }
 
 .project img {
@@ -244,6 +210,11 @@ html {
     transition: top 2s 0.2s, opacity 0.5s;
 }
 
+.project:hover {
+    /* transition: all .3s ease-in; */
+    transform: scale(1.3);
+  }
+
 .project:hover img {
     opacity: 1;
     top: -25%;
@@ -255,51 +226,252 @@ html {
     width: 100%;
 }
   
-.services-wrapper {
+.exp-wrapper {
     width: 100%;
     flex-direction: column;
+    margin-bottom: 15rem;
 }
 
-.service {
+.exp {
     width: 70%;
     margin: 2rem 0;
-    border-bottom: 0.5rem solid #9b0e0e;
+    border-bottom: 0.5rem solid #5f1cfa;
 }
 
-.service-btn {
+.exp-btn {
     width: 100%;
     position: relative;
     display: block;
     height: 15rem;
 }
 
-.service-btn span {
-    font-family: "Poppins", sans-serif;
+.exp-btn span {
+    font-family: "M+PLUS+1", sans-serif;
     font-size: 10rem;
     font-style: italic;
     font-weight: bold;
-    color: #9b0e0e;
+    color: #5f1cfa;
     position: absolute;
     right: 0;
     pointer-events: none;
-    transition: right 0.5s;
+    /* transition: right 0.5s; */
 }
 
-.service-text {
+.exp-text {
     font-size: 5rem;
     color: #777;
     letter-spacing: 0.1rem;
     height: 0;
     visibility: hidden;
     opacity: 0;
-    transition: all 0.2s;
+    transition: right 0.5s;
 }
 
-.change.service-text {
+.change-text {
     height: 15rem;
     visibility: visible;
     opacity: 1;
     transition: height 0.5s, opacity 0.5s 0.5s;
 }
 
+.change-btn {
+    left: 0;
+    /* transition: left 0.5s; */
+}
+
+/* Section Five */
+.section-five {
+    position: relative;
+    height: 100vh;
+    margin-bottom: 10rem;
+    flex-direction: column;
+}
+  
+.form-heading {
+    font-family: "M+PLUS+1", sans-serif;
+    font-size: 6rem;
+    font-weight: 400;
+    color: #5f1cfa;
+    letter-spacing: 0.3rem;
+    margin-bottom: 3rem;
+    transition: opacity 0.3s;
+}
+
+.contact-form {
+    flex-direction: column;
+}
+
+.contact-form-input {
+    width: 60rem;
+    padding: 0.5rem;
+    margin: 1rem 0;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 0.1rem solid #5f1cfa;
+    font-size: 1.7rem;
+    font-weight: bold;
+    color: #aaa;
+    letter-spacing: 0.1rem;
+    height: 5rem;
+    }
+
+.contact-form-textarea {
+    height: 20rem;
+    resize: none;
+}
+
+.form-submit-btn {
+    width: 20rem;
+    height: 5rem;
+    background-color: #5f1cfa;
+    border: none;
+    align-self: flex-start;
+    font-size: 1.8rem;
+    color: #fff;
+}
+
+.message {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #f55e5e;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    margin: 0 auto 1rem 0;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.error.message {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Responsive */
+@media (max-width: 1350px) {
+    .main-btn {
+        width: 12.5rem;
+        height: 12.5rem;
+    }
+
+    .about-me-text {
+        font-size: 10rem;
+    }
+}
+
+@media (max-width: 1150px) {
+    html {
+        font-size: 55%;
+    }
+
+    .navbar-link {
+        margin: 0 2rem;
+    }
+
+    .main-btn {
+        bottom: -5rem;
+    }
+
+    .about-me-text {
+        font-size: 9rem;
+    }
+
+    .project-img {
+        padding: 7rem 11rem;
+    }
+
+    .exp-btn {
+        height: 12rem;
+    }
+
+    .exp-btn span {
+        font-size: 8rem;
+    }
+
+    .exp-text {
+        font-size: 3.5rem;
+    }
+}
+
+@media (max-width: 900px) {
+    .navbar-link {
+        font-size: 1.5rem;
+        margin: 0 1rem;
+    }
+
+    .section-heading {
+        left: 5rem;
+    }
+
+    .about-me-text {
+        font-size: 5.5rem;
+        color: #ccc;
+    }
+
+    .exp-btn {
+        height: 9rem;
+    }
+
+    .exp-btn span {
+        font-size: 6rem;
+    }
+
+    .exp-text {
+        font-size: 3.2rem;
+    }
+}
+
+@media (max-width: 700px) {
+    html {
+        font-size: 50%;
+    }
+
+    .contact-form-input {
+        width: 50rem;
+    }
+}
+
+@media (max-width: 550px) {
+    html {
+        font-size: 40%;
+    }
+
+    .logo {
+        font-size: 1.7rem;
+        top: 13rem;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .navbar {
+        justify-content: center;
+        padding: 0;
+    }
+
+    .main-btn {
+        bottom: 3rem;
+    }
+
+    .exp-btn span {
+        font-size: 4.5rem;
+    }
+
+    .exp-text {
+        font-size: 3rem;
+        color: #bbb;
+    }
+
+    .contact-form-input {
+        width: 40rem;
+    }
+}
+
+@media (max-width: 400px) {
+    html {
+        font-size: 35%;
+    }
+
+    .form-heading {
+        font-size: 5rem;
+    }
+}
 
